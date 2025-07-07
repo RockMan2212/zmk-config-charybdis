@@ -47,29 +47,7 @@
             hold-trigger-key-positions = <34>;
             tapping-term-ms = <100>;
         };
-        bhml: balanced_homerow_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <230>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <80>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <NUM_R ALPHA_R MACRO_R THUMBS>;    // <---[[the W key]]
-            hold-trigger-on-release;
-        };
 
-        bhmr: balanced_homerow_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <230>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <80>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <NUM_L ALPHA_L MACRO_L THUMBS>;    // <---[[the W key]]
-            hold-trigger-on-release;
-        };
 
     };
     };
@@ -89,12 +67,12 @@
 
         Base {
             bindings = <
-&kp ESC   &kp N1   &kp N2  &kp N3         &kp N4         &kp N5    &kp N6     &kp N7          &kp N8         &kp N9         &kp N0   &kp BSPC
-&kp TAB   &kp  Q   &kp W   &kp E          &kp R          &kp T     &kp Y      &kp U           &kp I          &kp O          &kp P    &kp RET
-&td_copy  &kp  A   &kp S   &bhml LSHIFT D &bhml LCTRL F  &kp G     &kp H      &bhmr LCTRL J   &bhmr RSHIFT K &bhmr RALT L   &td_s0   &kp SQT
-&kp LCTRL &lt 3 Z  &kp X   &kp C          &kp V          &lt 2 B   &kp N      &kp M           &kp COMMA      &kp DOT        &kp FSLH &lt 2 ESC
-                           &kp LGUI       &kp SPACE      &mo 4     &kp ENTER  &kp BACKSPACE
-                                          &kp LEFT_ALT   &mo 1     &mo 2
+&kp ESC   &kp N1   &kp N2  &kp N3    &kp N4         &kp N5    &kp N6     &kp N7          &kp N8         &kp N9         &kp N0   &kp BSPC
+&kp TAB   &kp  Q   &kp W   &kp E     &kp R          &kp T     &kp Y      &kp U           &kp I          &kp O          &kp P    &kp RET
+&td_copy  &kp  A   &kp S   &kp D     &kp F           &kp G    &kp H      &kp J           &kp K          &kp L          &td_s0   &kp SQT
+&kp LCTRL &lt 3 Z  &kp X   &kp C     &kp V          &lt 2 B   &kp N      &kp M           &kp COMMA      &kp DOT        &kp FSLH &lt 2 ESC
+                           &kp LGUI  &kp SPACE      &mo 4     &kp ENTER  &kp BACKSPACE
+                                     &kp LEFT_ALT   &mo 1     &mo 2
             >;
         };
 
