@@ -47,9 +47,6 @@
             hold-trigger-key-positions = <34>;
             tapping-term-ms = <100>;
         };
-
-
-    };
     };
 
     macros {
