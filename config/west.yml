@@ -1,16 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: charlyko
-      url-base: https://github.com/charlyko
+      url-base: https://github.com/petejohanson/
+    - name: inorichi
+      url-base: https://github.com/inorichi/
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main  # <--- v0.1을 반드시 main으로 바꿔야 합니다.
+      revision: feat/pointers-move-scroll
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: charlyko
+      remote: inorichi
       revision: main
   self:
     path: config
