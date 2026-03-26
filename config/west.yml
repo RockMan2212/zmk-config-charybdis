@@ -1,13 +1,13 @@
 manifest:
   remotes:
-    - name: zmkfirmware
+    - name: petejohanson
       url-base: https://github.com/petejohanson
     - name: inorichi
       url-base: https://github.com/inorichi
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: feat/pointers-move-scroll
+      remote: petejohanson
+      revision: v0.3.0  # 또는 'main' (최신 Zephyr 대응 버전)
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: inorichi
