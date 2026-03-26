@@ -1,16 +1,20 @@
 manifest:
   remotes:
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
-    - name: petersailinger
-      url-base: https://github.com/petersailinger
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: baduino
+      url-base: https://github.com/baduino
+
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main  # 또는 'main' (최신 Zephyr 대응 버전)
-      import: app/west.yml
-    - name: zmk-pmw3610-driver
-      remote: petersailinger
       revision: main
+      import: app/west.yml
+    
+    # Charybdis 트랙볼/마우스 기능을 위한 필수 모듈
+    - name: zmk-pmw3610-driver
+      remote: baduino
+      revision: main
+
   self:
     path: config
