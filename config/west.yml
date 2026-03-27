@@ -2,9 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
-    # Charybdis 드라이버를 위한 최신 리모트 추가
     - name: baduino
       url-base: https://github.com/baduino
 
@@ -14,7 +11,7 @@ manifest:
       revision: main
       import: app/west.yml
     
-    # 에러가 발생했던 부분: 검증된 baduino의 저장소를 사용합니다.
+    # Charybdis 트랙볼 센서(PMW3610)용 최신 드라이버
     - name: zmk-pmw3610-driver
       remote: baduino
       revision: main
