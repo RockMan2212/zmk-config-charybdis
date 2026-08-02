@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: baduino
-      url-base: https://github.com/baduino
+    - name: badjeff
+      url-base: https://github.com/badjeff
 
   projects:
     - name: zmk
@@ -13,7 +13,7 @@ manifest:
     
     # Charybdis 트랙볼 센서(PMW3610)용 최신 드라이버
     - name: zmk-pmw3610-driver
-      remote: baduino
+      remote: badjeff
       revision: main
 
   self:
