@@ -14,7 +14,7 @@ manifest:
     # Charybdis 트랙볼 센서(PMW3610)용 최신 드라이버
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: main
+      revision: zmk-0.4
 
   self:
     path: config
