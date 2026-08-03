@@ -35,6 +35,13 @@
             bindings = <&mo 4>;
             key-positions = <31 32 33>;
         };
+
+        studio_unlock_combo {
+            bindings = <&studio_unlock>;
+            key-positions = <30 31 32 33>;
+            layers = <0 1 2 3 4 5>;
+            timeout-ms = <100>;
+        };
     };
 
     behaviors {
