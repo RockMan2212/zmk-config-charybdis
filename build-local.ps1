@@ -85,7 +85,19 @@ $ZmkConfig = $WorkspaceConfig.Replace("\", "/")
 foreach ($shieldName in $Shield) {
     $BuildDir = "build/$shieldName"
     Write-Host "Building $Board / $shieldName ..."
-    west build -p always -s zmk/app -d $BuildDir -b $Board -- "-DZMK_CONFIG=$ZmkConfig" "-DSHIELD=$shieldName"
+    $BuildArgs = @("build", "-p", "always", "-s", "zmk/app", "-d", $BuildDir, "-b", $Board)
+
+    if ($shieldName -eq "charybdis_right") {
+        $BuildArgs += @("-S", "studio-rpc-usb-uart")
+    }
+
+    $BuildArgs += @("--", "-DZMK_CONFIG=$ZmkConfig", "-DSHIELD=$shieldName")
+
+    if ($shieldName -eq "charybdis_right") {
+        $BuildArgs += "-DCONFIG_ZMK_STUDIO=y"
+    }
+
+    west @BuildArgs
 }
 
 Write-Host ""
